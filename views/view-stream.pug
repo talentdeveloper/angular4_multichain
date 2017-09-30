@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1.bct-header View Stream
+    form#view-stream-form.bct-form
+        div.form-group
+            label(for="stream-list") Select Stream : 
+                a(href="#")#stream-refresh
+                    span.glyphicon.glyphicon-refresh
+            select.form-control#stream-name.bct-form__input.stream-list
+            
+        input(type='text' placeholder='Tx Id' required)#txid.bct-form__input
+        br
+        button(type='submit').bct-form__btn.bct-form__btn_read View Stream
+        a(target="_blank")#download 
+    include ./overlay
